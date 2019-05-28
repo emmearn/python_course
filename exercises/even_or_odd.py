@@ -9,3 +9,6 @@ def even_or_odd():
 
 
 even_or_odd()
+
+id(42)
+type(24)
