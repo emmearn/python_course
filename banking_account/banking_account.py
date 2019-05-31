@@ -44,3 +44,5 @@ for count in range(1, 100):
     banking_account2.withdraw(10 + count)
 
 banking_account2.to_string()  # I'm calling the getter method  # Mario Bianchi 124 $60
+
+print(banking_account1._BankingAccount__amount)  # oops
