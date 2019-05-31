@@ -1,7 +1,12 @@
-class BankingAccount:
-    def __init__(self, name, account, amount):
+class Account:
+    def __init__(self, name, account):
         self.name = name
         self.account = account
+
+
+class BankAccount(Account):
+    def __init__(self, name, account, amount):
+        super().__init__(name, account)
         self.__amount = amount
 
     @property
@@ -24,8 +29,8 @@ class BankingAccount:
         print(f'{self.name} {self.account} ${self.amount}')
 
 
-banking_account1 = BankingAccount('Mario Rossi', 123, 0)
-banking_account2 = BankingAccount('Mario Bianchi', 124, 0)
+banking_account1 = BankAccount('Mario Rossi', 123, 0)
+banking_account2 = BankAccount('Mario Bianchi', 124, 0)
 
 banking_account1.amount = 10000  # I'm calling the setter method
 banking_account2.amount = 6000  # I'm calling the setter method
@@ -45,4 +50,4 @@ for count in range(1, 100):
 
 banking_account2.to_string()  # I'm calling the getter method  # Mario Bianchi 124 $60
 
-print(banking_account1._BankingAccount__amount)  # oops
+print(banking_account1._BankAccount__amount)  # oops
