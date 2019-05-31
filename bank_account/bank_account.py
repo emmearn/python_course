@@ -11,12 +11,12 @@ class BankAccount(Account):
 
     @property
     def amount(self):
-        print("I'm calling the getter method")
+        # print("I'm calling the getter method")
         return self.__amount
 
     @amount.setter
     def amount(self, amount):
-        print("I'm calling the setter method")
+        # print("I'm calling the setter method")
         self.__amount = amount
 
     def withdraw(self, amount):
