@@ -13,8 +13,12 @@ class RabbitConnector:
         print("..eseguito")
 
     def publish_message(self, message):
-        self.channel.basic_publish(exchange='', rounting_key='worker_queue', body=message)
-        print("Inviato messaggio %s", message)
+        self.channel.basic_publish(exchange='', routing_key='worker_queue', body=message)
+        print(f"Inviato messaggio '{message}'")
 
     def terminate(self):
         self.connection.close()
+
+
+connector = RabbitConnector()
+connector.publish_message("banana")

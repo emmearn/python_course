@@ -1,4 +1,4 @@
-from rabbitmq import RabbitConnector
+from rabbitmq.rabbit_connector import RabbitConnector
 
 connector = RabbitConnector()
 
