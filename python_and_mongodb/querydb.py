@@ -10,3 +10,11 @@ print("***")
 ps = mongodb.find({"computer": "apple"})
 for person in ps:
     print(person)
+
+print("***")
+res = mongodb.update({"name": "Giuseppe"}, {"$set": {"eta": 50}})
+
+print("***")
+ps2 = mongodb.find({"name": "Giuseppe"})
+for person in ps2:
+    print(person)

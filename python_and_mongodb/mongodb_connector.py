@@ -25,3 +25,6 @@ class MongodbConnector:
 
     def find(self, q):
         return self.persons_coll.find(q)
+
+    def update(self, q, u):
+        self.persons_coll.update_one(q, u)
