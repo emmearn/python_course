@@ -23,6 +23,9 @@ class MongodbConnector:
     def find_one(self):
         return self.persons_coll.find_one()
 
+    def find_with(self, q):
+        return self.persons_coll.find_one(q)
+
     def find(self, q):
         return self.persons_coll.find(q)
 
